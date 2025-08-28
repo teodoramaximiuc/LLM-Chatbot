@@ -1,0 +1,59 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD}
+      ORACLE_DATABASE: XEPDB1
+      APP_USER: ${ORACLE_USER}
+      APP_USER_PASSWORD: ${ORACLE_PASSWORD}
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'select 1 from dual;' | sqlplus -s system/${ORACLE_PASSWORD}@localhost/XEPDB1 || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 40s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file: .env
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      SECRET_KEY: ${SECRET_KEY}
+      ORACLE_USER: ${ORACLE_USER} 
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD}
+      ORACLE_DSN: oracle-db:1521/XEPDB1
+      HTTP_PROXY:
+      HTTPS_PROXY:
+      ALL_PROXY:
+      http_proxy:
+      https_proxy:
+      all_proxy:
+      NO_PROXY:
+      no_proxy:
+    depends_on:
+      oracle-db:
+        condition: service_healthy
+    volumes:
+      - ./chroma_db_v5:/app/chroma_db
+      - ./static:/app/static
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_BOOK_API_BASE: "http://localhost:8000"
+        VITE_ASSEMBLYAI_API_KEY: "${VITE_ASSEMBLYAI_API_KEY}"
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  oracle_data:

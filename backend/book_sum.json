@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "Title": "1984",
+    "Author": "George Orwell",
+    "Year": 1949,
+    "Genre": [
+      "Dystopian",
+      "Political Fiction"
+    ],
+    "Summary": "In a totalitarian state under constant surveillance, Winston Smith dreams of truth and freedom. His forbidden love and rebellion bring hope, but betrayal and oppression crush him. A chilling tale of control and individuality.",
+    "Rating": 4.6,
+    "Audience": "Adult",
+    "Tone": [
+      "Dark",
+      "Oppressive",
+      "Philosophical"
+    ]
+  },
+  {
+    "id": 2,
+    "Title": "The Hobbit",
+    "Author": "J.R.R. Tolkien",
+    "Year": 1937,
+    "Genre": [
+      "Fantasy",
+      "Adventure"
+    ],
+    "Summary": "Bilbo Baggins, a quiet hobbit, is pulled into a quest with dwarves and Gandalf. They journey to reclaim treasure from Smaug, facing trolls, goblins, and danger. A tale of courage, friendship, and unexpected heroism.",
+    "Rating": 4.7,
+    "Audience": "All Ages",
+    "Tone": [
+      "Adventurous",
+      "Whimsical",
+      "Hopeful"
+    ]
+  },
+  {
+    "id": 3,
+    "Title": "To Kill a Mockingbird",
+    "Author": "Harper Lee",
+    "Year": 1960,
+    "Genre": [
+      "Classic",
+      "Historical Fiction"
+    ],
+    "Summary": "Scout Finch grows up in the racially divided South while her father defends a black man wrongly accused. Through innocence and courage, the story explores justice, prejudice, and empathy.",
+    "Rating": 4.8,
+    "Audience": "Adult/YA",
+    "Tone": [
+      "Emotional",
+      "Thoughtful",
+      "Heartfelt"
+    ]
+  },
+  {
+    "id": 4,
+    "Title": "Pride and Prejudice",
+    "Author": "Jane Austen",
+    "Year": 1813,
+    "Genre": [
+      "Romance",
+      "Classic"
+    ],
+    "Summary": "Elizabeth Bennet navigates class, family, and pride in her encounters with the aloof Mr. Darcy. Misunderstandings give way to love in this witty and timeless social commentary.",
+    "Rating": 4.5,
+    "Audience": "Adult",
+    "Tone": [
+      "Romantic",
+      "Witty",
+      "Light"
+    ]
+  },
+  {
+    "id": 5,
+    "Title": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "Year": 1925,
+    "Genre": [
+      "Classic",
+      "Tragedy"
+    ],
+    "Summary": "Jay Gatsby throws lavish parties to win back Daisy Buchanan. Narrated by Nick Carraway, the novel reveals illusions, ambition, and loss in the Jazz Age. A critique of the American Dream.",
+    "Rating": 4.4,
+    "Audience": "Adult",
+    "Tone": [
+      "Melancholic",
+      "Tragic",
+      "Reflective"
+    ]
+  },
+  {
+    "id": 6,
+    "Title": "Moby Dick",
+    "Author": "Herman Melville",
+    "Year": 1851,
+    "Genre": [
+      "Adventure",
+      "Classic"
+    ],
+    "Summary": "Sailor Ishmael joins Captain Ahab’s obsessive hunt for Moby Dick, the great white whale. The voyage blends adventure with philosophy and danger. A tale of obsession, fate, and nature.",
+    "Rating": 4.0,
+    "Audience": "Adult",
+    "Tone": [
+      "Philosophical",
+      "Dark",
+      "Adventurous"
+    ]
+  },
+  {
+    "id": 7,
+    "Title": "Harry Potter and the Philosopher’s Stone",
+    "Author": "J.K. Rowling",
+    "Year": 1997,
+    "Genre": [
+      "Fantasy",
+      "Young Adult"
+    ],
+    "Summary": "Harry Potter discovers he is a wizard and begins studies at Hogwarts. With friends Ron and Hermione, he faces dangers tied to the Philosopher’s Stone. A magical journey of friendship and courage.",
+    "Rating": 4.9,
+    "Audience": "YA",
+    "Tone": [
+      "Magical",
+      "Adventurous",
+      "Hopeful"
+    ]
+  },
+  {
+    "id": 8,
+    "Title": "The Lord of the Rings: The Fellowship of the Ring",
+    "Author": "J.R.R. Tolkien",
+    "Year": 1954,
+    "Genre": [
+      "Fantasy",
+      "Epic"
+    ],
+    "Summary": "Frodo Baggins inherits the One Ring and joins a fellowship to destroy it in Mount Doom. Their journey is full of peril, betrayal, and courage in a battle against Sauron’s power.",
+    "Rating": 4.9,
+    "Audience": "Adult/YA",
+    "Tone": [
+      "Epic",
+      "Adventurous",
+      "Heroic"
+    ]
+  },
+  {
+    "id": 9,
+    "Title": "Brave New World",
+    "Author": "Aldous Huxley",
+    "Year": 1932,
+    "Genre": [
+      "Dystopian",
+      "Science Fiction"
+    ],
+    "Summary": "In a future society, humans are engineered and controlled for stability. Individuality and emotions are suppressed. When a ‘Savage’ challenges the system, its values collapse.",
+    "Rating": 4.3,
+    "Audience": "Adult",
+    "Tone": [
+      "Philosophical",
+      "Critical",
+      "Cautionary"
+    ]
+  },
+  {
+    "id": 10,
+    "Title": "The Catcher in the Rye",
+    "Author": "J.D. Salinger",
+    "Year": 1951,
+    "Genre": [
+      "Classic",
+      "Coming-of-Age"
+    ],
+    "Summary": "Holden Caulfield wanders New York after being expelled from school. Struggling with grief and disillusionment, he questions adulthood and innocence. A defining story of teenage rebellion.",
+    "Rating": 4.1,
+    "Audience": "YA/Adult",
+    "Tone": [
+      "Rebellious",
+      "Reflective",
+      "Melancholic"
+    ]
+  }
+]
