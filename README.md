@@ -19,9 +19,7 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 - [Prerequisites](#prerequisites)
 - [.env Configuration](#env-configuration)
 - [Quick Start (Docker)](#quick-start-docker)
-- [Seeding ChromaDB](#seeding-chromadb)
 - [Local Development (no Docker)](#local-development-no-docker)
-- [API Endpoints](#api-endpoints)
 
 ---
 
