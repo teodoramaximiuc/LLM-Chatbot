@@ -44,7 +44,7 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ---
 
 ## Architecture
-
+''
 [Frontend: React/Vite] ⇄ [Backend: FastAPI]
 | |
 | ├─ OpenAI Chat (gpt-4o-mini) + Tools
@@ -52,6 +52,7 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 | ├─ ChromaDB (persistent vector store)
 | └─ Oracle XE (JWT auth, optional)
 └─ Web Speech API (TTS) + AssemblyAI STT (optional)
+''
 
 ---
 
