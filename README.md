@@ -69,19 +69,21 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ## Project Structure
 .
 ├── backend/
-│ ├── Dockerfile
-│ ├── requirements.txt
-│ └── server.py # FastAPI app (RAG + tools + optional Oracle auth)
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── server.py            # FastAPI app (RAG + tools + optional Oracle auth)
 ├── frontend/
-│ ├── Dockerfile
-│ └── src/App.jsx # React UI (chat, mic, TTS, optional auth UI)
-├── chroma_db_v5/ # (mounted) ChromaDB persistent store
-├── static/ # generated assets (book covers)
-│ └── cover.png
-├── book_sum.json # titles + summaries used to seed the vector index
+│   ├── Dockerfile
+│   └── src/
+│       └── App.jsx          # React UI (chat, mic, TTS, optional auth UI)
+├── chroma_db_v5/            # (mounted) ChromaDB persistent store
+├── static/                  # generated assets (book covers)
+│   └── cover.png
+├── book_sum.json            # titles + summaries used to seed the vector index
 ├── docker-compose.yml
-├── .env # environment variables (create this)
-└── README.md # this file
+├── .env                     # environment variables (create this)
+└── README.md                # this file
+
 ---
 
 ## Prerequisites
