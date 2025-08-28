@@ -22,10 +22,6 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 - [Seeding ChromaDB](#seeding-chromadb)
 - [Local Development (no Docker)](#local-development-no-docker)
 - [API Endpoints](#api-endpoints)
-- [Troubleshooting](#troubleshooting)
-- [Notes on Oracle Auth (Optional)](#notes-on-oracle-auth-optional)
-- [FAQ](#faq)
-- [License](#license)
 
 ---
 
@@ -44,7 +40,7 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ---
 
 ## Architecture
-''
+```text
 [Frontend: React/Vite] ⇄ [Backend: FastAPI]
 | |
 | ├─ OpenAI Chat (gpt-4o-mini) + Tools
@@ -52,7 +48,7 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 | ├─ ChromaDB (persistent vector store)
 | └─ Oracle XE (JWT auth, optional)
 └─ Web Speech API (TTS) + AssemblyAI STT (optional)
-''
+```
 
 ---
 
@@ -68,22 +64,24 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ---
 
 ## Project Structure
+```text
 .
 ├── backend/
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   └── server.py            # FastAPI app (RAG + tools + optional Oracle auth)
+│   └── server.py              # FastAPI app (RAG + tools + optional Oracle auth)
 ├── frontend/
 │   ├── Dockerfile
 │   └── src/
-│       └── App.jsx          # React UI (chat, mic, TTS, optional auth UI)
-├── chroma_db_v5/            # (mounted) ChromaDB persistent store
-├── static/                  # generated assets (book covers)
+│       └── App.jsx            # React UI (chat, mic, TTS, optional auth UI)
+├── chroma_db_v5/              # (mounted) ChromaDB persistent store
+├── static/                    # generated assets (book covers)
 │   └── cover.png
-├── book_sum.json            # titles + summaries used to seed the vector index
+├── book_sum.json              # titles + summaries used to seed the vector index
 ├── docker-compose.yml
-├── .env                     # environment variables (create this)
-└── README.md                # this file
+├── .env                       # environment variables (create this)
+└── README.md                  # this file
+```
 
 ---
 
@@ -114,3 +112,60 @@ ORACLE_DSN=oracle-db:1521/XEPDB1
 
 # Frontend (voice input)
 VITE_ASSEMBLYAI_API_KEY=your_assemblyai_key
+```
+## Quick Start (Docker)
+
+```bash
+# 1) Create your environment file
+cp .env.example .env
+
+# Required (at minimum)
+# OPENAI_API_KEY=sk-...
+# CHROMA_DB_PATH=./chroma_db_v5
+# Optional
+# ASSEMBLYAI_API_KEY=...
+# ORACLE_DSN=localhost:1521/XEPDB1
+# ORACLE_JWT_SECRET=change-me
+# ORACLE_USER=...
+# ORACLE_PASSWORD=...
+
+# 2) Build & run
+docker compose up --build
+
+# 3) Open:
+# Backend (FastAPI): http://localhost:8000
+# API docs (Swagger): http://localhost:8000/docs
+# Frontend (React/Vite): http://localhost:5173
+```
+
+## Local Development (no Docker)
+
+### Backend 
+```bash
+# From repo root
+python -m venv .venv
+source .venv/bin/activate   # (Windows: .venv\Scripts\activate)
+pip install -r backend/requirements.txt
+
+# Env vars (minimal)
+export OPENAI_API_KEY=sk-...
+export CHROMA_DB_PATH=./chroma_db_v5
+
+# Optional (speech / Oracle)
+# export ASSEMBLYAI_API_KEY=...
+# export ORACLE_DSN=localhost:1521/XEPDB1
+# export ORACLE_JWT_SECRET=change-me
+# export ORACLE_USER=...
+# export ORACLE_PASSWORD=...
+
+# Run dev server
+uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000
+# → http://localhost:8000  (docs at /docs)
+```
+### Frontend
+```
+# From repo root
+cd frontend
+npm install
+npm run dev
+```
