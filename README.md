@@ -31,8 +31,8 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
   - `get_book_summary` (fetch summary by exact title)
 - **Conversational answers** via `gpt-4o-mini`
 - **Optional cover images** via `gpt-image-1`
-- **Browser TTS** (Web Speech API)
-- **Optional voice input** (AssemblyAI transcription)
+- **Optional Text to Speech** (Web Speech API)
+- **Optional Speech to Text for voice input** (AssemblyAI transcription)
 - **Optional JWT auth** (login/signup) with Oracle XE (`BOTUSERS` table)
 
 ---
