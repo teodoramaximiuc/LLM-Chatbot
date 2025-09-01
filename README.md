@@ -4,12 +4,12 @@ A full-stack app that recommends books using **RAG (Retrieval-Augmented Generati
 It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent ChromaDB** vector store, optional **image generation**, optional **voice input (AssemblyAI)**, and optional **JWT auth** backed by **Oracle XE**.
 
 <p align="center">
-  <img src="/SCREENS/Login.png" alt="Login page" width="360">
-  <img src="/SCREENS/chat-cheiaOpenAI-Inactiva.png" alt="Chat page" width="360">
+  <img src="/SCREENS/Login.png" alt="Login page">
+  <img src="/SCREENS/chat-cheiaOpenAI-Inactiva.png" alt="Chat page">
 </p>
 
 <p align="center">
-<img src="/SCREENS/Chat.png" alt="Login page" width="360">
+<img src="/SCREENS/Chat.png" alt="Login page">
 </p>
 
 ---
