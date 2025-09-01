@@ -67,7 +67,8 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ├── backend/
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   └── server.py              # FastAPI app (RAG + tools + optional Oracle auth)
+│   ├── server.py              # FastAPI app (RAG + tools + optional Oracle auth)
+│   └── book_sum.json          # titles + summaries used to seed the vector index
 ├── frontend/
 │   ├── Dockerfile
 │   └── src/
@@ -75,7 +76,6 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
 ├── chroma_db_v5/              # (mounted) ChromaDB persistent store
 ├── static/                    # generated assets (book covers)
 │   └── cover.png
-├── book_sum.json              # titles + summaries used to seed the vector index
 ├── docker-compose.yml
 ├── .env                       # environment variables (create this)
 └── README.md                  # this file
