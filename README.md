@@ -8,6 +8,10 @@ It includes a **React (Vite) frontend**, a **FastAPI** backend, a **persistent C
   <img src="/SCREENS/chat-cheiaOpenAI-Inactiva.png" alt="Chat page" width="360">
 </p>
 
+<p align="center">
+<img src="/SCREENS/Chat.png" alt="Login page" width="360">
+</p>
+
 ---
 
 ## Table of Contents
